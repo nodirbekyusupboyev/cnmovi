@@ -1,20 +1,19 @@
-# CNMOVI — Telegram Cinema Ecosystem & AI Streaming Platform (PRD v7.0 Definitive Architecture)
+# CNMOVI — Telegram Cinema Ecosystem & AI Streaming Platform (PRD v7.0)
 
-Ushbu loyiha **PRD v6.0** texnik topshirig'idagi barcha modullarni + **PRD v7.0 Eksklyuziv funksiyalarini** o'z ichiga olgan to'liq ekotizimdir. Maxsus ravishda **4 GB RAM (AMD Ryzen 3)** kompyuterda qotmasdan ishlash uchun **Dual-Engine Lightweight Mode** va server uchun **PostgreSQL 16 + Nginx Blue-Green** arxitekturasida qurilgan.
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/nodirbekyusupboyev/cnmovi)
 
-## 🚀 Ishga tushirish (1-bosishda):
-`start_cnmovi.bat` faylini ikki marta bosing yoki terminalda:
+Ushbu platforma asinxron Telegram Bot, yuqori unumdorlikka ega Telegram Mini App (TMA), markazlashtirilgan Video Delivery infratuzilmasi va Admin CMS tizimidan iborat to'liq huquqli raqamli oqimli kinoteatr va ta'limiy-madaniy media platformadir.
 
-1. **Backend (FastAPI + Aiogram 3 Bot + SQLite/PostgreSQL):**
-   ```powershell
-   cd backend
-   pip install -r requirements.txt
-   python -m uvicorn app.main:app --host 127.0.0.1 --port 8000
-   ```
-2. **Frontend (Telegram Mini App + Admin CMS):**
-   ```powershell
-   cd frontend
-   npm install
-   npm run dev
-   ```
-   So'ngra brauzerda **http://localhost:5173** manzilini oching!
+## 🚀 24/7 Bepul Serverga Deploy qilish:
+Bitta bosish orqali 24/7 bulutli serverda ishga tushirish:
+👉 **[Deploy to Render (24/7 Bepul)](https://render.com/deploy?repo=https://github.com/nodirbekyusupboyev/cnmovi)**
+
+## 💻 Kompyuterda ishga tushirish (Local):
+`start_cnmovi.bat` faylini ikki marta bosing yoki:
+```bash
+# Backend & Mini App:
+cd backend
+pip install -r requirements.txt
+python -m uvicorn app.main:app --host 0.0.0.0 --port 8000
+```
+Brauzerda: `http://localhost:8000`
