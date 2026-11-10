@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  cnmovi-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: cnmovi_production
+    restart: always
+    ports:
+      - "8000:8000"
+    environment:
+      - PORT=8000
+      - BOT_TOKEN=9248179659:AAG_PNrBhNmyvix-u9QTcu_1xxGx11GziLk
+      - BOT_USERNAME=cnmovibot
+      - WEBAPP_URL=https://road-ethics-revenue-necessity.trycloudflare.com
+      - DATABASE_URL=sqlite+aiosqlite:///./cnmovi.db
+    volumes:
+      - cnmovi_data:/app/backend
+
+volumes:
+  cnmovi_data:

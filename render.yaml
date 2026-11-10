@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: cnmovi-cinema
+    runtime: docker
+    plan: free
+    region: frankfurt
+    envVars:
+      - key: PORT
+        value: 8000
+      - key: BOT_TOKEN
+        value: 9248179659:AAG_PNrBhNmyvix-u9QTcu_1xxGx11GziLk
+      - key: BOT_USERNAME
+        value: cnmovibot
+      - key: DATABASE_URL
+        value: sqlite+aiosqlite:///./cnmovi.db
